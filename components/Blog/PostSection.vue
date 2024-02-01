@@ -1,6 +1,4 @@
 <script setup>
-import {defineProps} from 'vue';
-
 const {blogData} = defineProps(["blogData"])
 
 const computeColour = computed(() => {
@@ -28,7 +26,7 @@ const computeColour = computed(() => {
         </button>
         <p class="text-xs text-gray-400">{{ data.date }}</p>
       </div>
-      <p class="font-medium text-lg">{{ data.title }}</p>
+      <NuxtLink :to="`/blog/${data.id}`" class="font-medium text-lg">{{ data.title }}</NuxtLink>
     </div>
   </div>
 </template>
