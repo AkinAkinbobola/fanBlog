@@ -15,4 +15,9 @@ export default defineNuxtConfig({
             autoprefixer: {},
         },
     },
+    app: {
+        head: {
+            title: "Fan Blog"
+        }
+    }
 })
