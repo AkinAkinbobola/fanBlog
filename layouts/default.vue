@@ -10,7 +10,7 @@ import Fa6BrandsTwitter from "~/components/Icons/Twitter.vue";
 
 <template>
   <div>
-    <nav class="container mx-auto p-4 flex justify-between">
+    <nav class="py-4 px-6 flex justify-between">
       <div class="text-4xl">
         <NuxtLink class="font-bold font-ubuntu cursor-pointer">
           <p>FLAWLESS</p>
@@ -27,7 +27,9 @@ import Fa6BrandsTwitter from "~/components/Icons/Twitter.vue";
         <Fa6BrandsInstagram/>
         <Fa6BrandsTwitter/>
         <MaterialSymbolsMail/>
-        <PhMagnifyingGlass/>
+        <NuxtLink to="/search" class="cursor-pointer">
+          <PhMagnifyingGlass/>
+        </NuxtLink>
       </div>
 
 
