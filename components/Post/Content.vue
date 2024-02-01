@@ -1,17 +1,13 @@
 <script setup>
-import {computed} from "vue";
-
-const computeColour = computed(() => {
-  return (text) => {
-    if (text === "Music") {
-      return "pink";
-    } else if (text === "Fashion") {
-      return "blue";
-    } else {
-      return "red";
-    }
-  };
-});
+const computeColour = (text) => {
+  if (text === "Music") {
+    return "pink";
+  } else if (text === "Fashion") {
+    return "blue";
+  } else {
+    return "red";
+  }
+}
 const {post} = defineProps(["post"]);
 </script>
 
