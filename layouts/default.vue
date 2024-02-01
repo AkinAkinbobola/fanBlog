@@ -5,9 +5,11 @@ import Fa6BrandsInstagram from "~/components/Icons/Instagram.vue";
 import MaterialSymbolsMail from "~/components/Icons/Mail.vue";
 import PhMagnifyingGlass from "~/components/Icons/Search.vue";
 import Fa6BrandsTwitter from "~/components/Icons/Twitter.vue";
+import MdiMenu from "~/components/Icons/Menu.vue";
+import MingcuteCloseLine from "~/components/Icons/Cancel.vue";
+import MaterialSymbolsLightMenuRounded from "~/components/Icons/Menu.vue";
 
 const menu = ref(false);
-const showSearch = ref(false);
 
 const toggleMenu = () => {
   menu.value = !menu.value;
@@ -16,9 +18,9 @@ const toggleMenu = () => {
 
 <template>
   <div>
-    <nav class="py-4 px-6 flex justify-between">
+    <nav class="flex items-center justify-between py-5 font-poppins px-10 border-b shadow-md">
       <div class="text-4xl">
-        <NuxtLink class="font-bold font-ubuntu cursor-pointer">
+        <NuxtLink class="font-bold font-ubuntu cursor-pointer" to="/">
           <p>FLAWLESS</p>
         </NuxtLink>
       </div>
@@ -33,13 +35,32 @@ const toggleMenu = () => {
         <Fa6BrandsInstagram/>
         <Fa6BrandsTwitter/>
         <MaterialSymbolsMail/>
-        <NuxtLink to="/search" class="cursor-pointer">
+        <NuxtLink to="/search" class="cursor-pointer border-none">
           <PhMagnifyingGlass/>
         </NuxtLink>
       </div>
 
+      <div class="lg:hidden cursor-pointer" @click="toggleMenu">
+        <MaterialSymbolsLightMenuRounded v-if="!menu" class="text-2xl"/>
+        <MingcuteCloseLine v-else class="text-2xl"/>
+      </div>
+
 
     </nav>
+    <div v-if="menu" class="lg:hidden bg-white flex flex-col border-b border-black shadow-md p-8">
+      <div class="">
+        <NuxtLink class="border-none block py-2 px-4" to="/about">About</NuxtLink>
+        <NuxtLink class="border-none block py-2 px-4" to="/blog">Blog</NuxtLink>
+        <NuxtLink class="border-none block py-2 px-4" to="/contact">Contact</NuxtLink>
+      </div>
+      <div class="flex justify-between w-1/2 p-4 gap-4">
+        <MaterialSymbolsRssFeed/>
+        <Fa6BrandsFacebookF/>
+        <Fa6BrandsInstagram/>
+        <Fa6BrandsTwitter/>
+        <MaterialSymbolsMail/>
+      </div>
+    </div>
     <slot></slot>
   </div>
 </template>

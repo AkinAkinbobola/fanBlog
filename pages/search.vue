@@ -2,7 +2,6 @@
 import postsData from "../data/db.json";
 import {ref, watch} from "vue";
 import MingcuteCloseLine from "~/components/Icons/Cancel.vue";
-import SkeletonDisplay from "~/components/Search/SkeletonDisplay.vue";
 
 const blogPosts = ref(null);
 const search = ref("");
@@ -28,12 +27,12 @@ watch(search, () => {
 <template>
   <div class="font-poppins">
     <div class="pt-4 px-16 mb-4 flex items-center">
-      <MingcuteCloseLine @click="clearSearch" class="mr-4 cursor-pointer"/>
+      <MingcuteCloseLine @click="clearSearch" class="mr-4 cursor-pointer text-xl"/>
       <input type="text" class="outline-none border-b w-full pb-1" v-model="search">
     </div>
 
     <div class="bg-whiteSmoke-0 md:py-12 py-4 px-4 md:px-28 h-max">
-      <SkeletonDisplay :blogPosts="blogPosts" v-if="!blogPosts"/>
+      <SearchSkeletonDisplay :blogPosts="blogPosts" v-if="!blogPosts"/>
 
       <div v-else>
         <SearchPosts :blogPosts="blogPosts"/>
