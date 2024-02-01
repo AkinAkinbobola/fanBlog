@@ -6,6 +6,6 @@
   <div>
     <Hero/>
     <LatestPosts/>
-    <Carousel/>
+    <Footer/>
   </div>
 </template>
