@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 
 </script>
 
@@ -6,9 +6,6 @@
   <div>
     <Hero/>
     <LatestPosts/>
+    <Carousel/>
   </div>
 </template>
-
-<style scoped>
-
-</style>
