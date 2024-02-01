@@ -1,11 +1,17 @@
 <script setup>
-
 import MaterialSymbolsRssFeed from "~/components/Icons/Rss.vue";
 import Fa6BrandsFacebookF from "~/components/Icons/Facebook.vue";
 import Fa6BrandsInstagram from "~/components/Icons/Instagram.vue";
 import MaterialSymbolsMail from "~/components/Icons/Mail.vue";
 import PhMagnifyingGlass from "~/components/Icons/Search.vue";
 import Fa6BrandsTwitter from "~/components/Icons/Twitter.vue";
+
+const menu = ref(false);
+const showSearch = ref(false);
+
+const toggleMenu = () => {
+  menu.value = !menu.value;
+};
 </script>
 
 <template>
