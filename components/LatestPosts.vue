@@ -47,7 +47,7 @@
         <img alt="" src="/blog-posts/4.jpg" class="mb-3 object-cover h-80 w-full md:h-full"/>
         <div class="pb-5">
           <div class="flex justify-between items-center mb-4">
-            <button class="py-2 px-4 rounded-3xl bg-red-500 text-white text-lg">Controversies</button>
+            <button class="py-2 px-4 rounded-3xl bg-red-600 text-white text-lg">Controversies</button>
             <p class="text-sm text-gray-400">6 Dec 2023</p>
           </div>
           <p class="font-bold text-lg">Kanye West: The Unfiltered Truth Behind the Controversies</p>
