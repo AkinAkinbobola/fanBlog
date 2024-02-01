@@ -5,6 +5,7 @@ import Fa6BrandsFacebookF from "~/components/Icons/Facebook.vue";
 import Fa6BrandsInstagram from "~/components/Icons/Instagram.vue";
 import MaterialSymbolsMail from "~/components/Icons/Mail.vue";
 import PhMagnifyingGlass from "~/components/Icons/Search.vue";
+import Fa6BrandsTwitter from "~/components/Icons/Twitter.vue";
 </script>
 
 <template>
@@ -24,6 +25,7 @@ import PhMagnifyingGlass from "~/components/Icons/Search.vue";
         <MaterialSymbolsRssFeed/>
         <Fa6BrandsFacebookF/>
         <Fa6BrandsInstagram/>
+        <Fa6BrandsTwitter/>
         <MaterialSymbolsMail/>
         <PhMagnifyingGlass/>
       </div>

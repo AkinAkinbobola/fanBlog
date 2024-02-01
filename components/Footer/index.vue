@@ -3,9 +3,11 @@
 </script>
 
 <template>
-<div>
-  <FooterCarousel/>
-</div>
+  <div>
+    <FooterCarousel/>
+    <FooterNewsletter/>
+    <FooterCopyright/>
+  </div>
 </template>
 
 <style scoped>
